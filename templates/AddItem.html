@@ -1,0 +1,33 @@
+<html>
+<body>
+<center><h1>ABC Super Market</h1></center><br>
+<center><h4>Enter Item Parameters and Click Add To Cart button.</h4></center> 
+<center><form action="/AddToCart">
+  <center>Select Item: 
+  <input list="items" name="item">
+  <datalist id="items">
+    <option value="battery">
+    <option value="earbuds">
+    <option value="giftarticles">
+    <option value="groundnut">
+    <option value="mug">
+    <option value="oil">
+    <option value="paste">
+    <option value="rice">
+    <option value="soap">
+    <option value="toiletcleaner">
+  </datalist></center><br>
+  <center>Cost       : <input type="text" name="cost"></center><br>
+  <center>Qty        : <input type="text" name="qty"></center><br>
+<input type="submit" value="Add to Cart">
+</form></center>
+<center>
+<button type="button">
+<a href="/Biller/PrintBill">Print Bill</a>
+</button></center><br>
+<center>
+<button type="button">
+<a href="/Biller">Exit</a>
+</button></center>
+</body>
+</html>
