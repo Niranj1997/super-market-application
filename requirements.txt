@@ -1,3 +1,4 @@
+django-heroku
 click
 Flask
 itsdangerous
