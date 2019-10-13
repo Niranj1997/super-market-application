@@ -157,5 +157,6 @@ def print():
     return render_template('Print.html')
 
 if __name__ =="__main__":
-            app.run(host='0.0.0.0',threaded=True)
+    app.run(debug=True, port=33507)                        #app.run(host='0.0.0.0',threaded=True)
+           
             
