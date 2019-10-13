@@ -1,6 +1,7 @@
 django-heroku
 click
 Flask
+gunicorn
 itsdangerous
 Jinja2
 MarkupSafe
