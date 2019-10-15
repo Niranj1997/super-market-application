@@ -1,1 +1,1 @@
-web: gunicorn deploy: web
+web: gunicorn myapp.wsgi --log-file -
