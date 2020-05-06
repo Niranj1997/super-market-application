@@ -68,27 +68,7 @@ def Purchase():
     return render_template('Purchase.html')            
 @app.route('/Purchase')                                #AdminPurchaseMail
 def order():           
-    if 'item' in request.args:
-        name=request.args['item']
-    if 'qty' in request.args:
-        qty=request.args['qty']
-    sendSms(name,qty)
     return "Successfully Ordered"
-def sendSms(name,qty):                                 #AdminPurchaseMailSMTPfunction
-    text = "Please take this order. Item Name - "+name+". Quantity- "+qty
-    sender='niranjandeveloper97@gmail.com'
-    receivers=['niranj1997@gmail.com']
-    password='testingaccount'
-    try:
-        smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
-        smtpObj.ehlo()
-        smtpObj.starttls()
-        smtpObj.ehlo()
-        smtpObj.login(sender, password)
-        smtpObj.sendmail(sender, receivers,text)
-        smtpObj.quit()
-    except smtplib.SMTPException:
-        print ("error")
 @app.route('/Income')                                   #ShowsIncome
 def incom():
     global inc,income
@@ -156,7 +136,6 @@ def print():
     f.close()
     return render_template('Print.html')
 
-#if __name__ =="__main__":
-    #app.run(debug=True, port=33507)                        #app.run(host='0.0.0.0',threaded=True)
-           
+if __name__ =="__main__":
+            app.run(host='0.0.0.0',threaded=True)
             
